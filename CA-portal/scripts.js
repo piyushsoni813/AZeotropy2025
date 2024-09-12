@@ -18,7 +18,7 @@ function animateNumber(element, start, end, duration) {
 
 // Function to handle when elements come into view
 function startCounting() {
-    const counters = document.querySelectorAll('.card-title');
+    const counters = document.querySelectorAll('.update');
     counters.forEach((counter) => {
         const updateCount = () => {
             const target = +counter.getAttribute('data-target');
