@@ -2751,3 +2751,7 @@ html {
   }
 }
 
+#apple:hover {
+  box-shadow: 10px 10px;
+  scale: 1.05;
+}
