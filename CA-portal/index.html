@@ -26,11 +26,11 @@
                 </div>
                 <ul tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Perks</a></li>
-                    <li><a>Responsibilities</a></li>
-                    <li><a>Contact Us</a></li>
+                    <li><a onclick="scrollToSection('home')">Home</a></li>
+                    <li><a onclick="scrollToSection('about')">About</a></li>
+                    <li><a onclick="scrollToSection('perks')">Perks</a></li>
+                    <li><a onclick="scrollToSection('responsibilities')">Responsibilities</a></li>
+                    <li><a onclick="scrollToSection('contactus')">Contact Us</a></li>
                     </ul>
                 </ul>
             </div>
@@ -43,12 +43,12 @@
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-                <li><a>Home</a></li>
-                <li><a>leaderboard</a></li>
-                <li><a>About</a></li>
-                <li><a>Perks</a></li>
-                <li><a>Responsibilities</a></li>
-                <li><a>Contact Us</a></li>
+                <li><a onclick="scrollToSection('home')">Home</a></li>
+                <li><a onclick="scrollToSection('leaderboard')">leaderboard</a></li>
+                <li><a onclick="scrollToSection('about')">About</a></li>
+                <li><a onclick="scrollToSection('perks')">Perks</a></li>
+                <li><a onclick="scrollToSection('responsibilities')">Responsibilities</a></li>
+                <li><a onclick="scrollToSection('contact')">Contact Us</a></li>
                 <li>
                     <details>
                         <summary>Themes</summary>
@@ -69,14 +69,14 @@
             </ul>
         </div>
         <div class="navbar-end">
-            <a class="btn btn-primary lg:mr-2">Registration</a>
+            <a href="registration/reg.html" class="btn btn-primary lg:mr-2">Registration</a>
         </div>
     </header>
 
 
     <!-- <p class="text-center">Hi</p> -->
 
-    <div class="hero min-h-screen"
+    <div id="home" class="hero min-h-screen"
         style="background-image: url(https://www.azeotropy.org/static/assets/img/CA_Portal_Bg_image.jpg);">
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content max-w-max text-neutral-content text-left ">
@@ -94,7 +94,7 @@
     </div>
 
     <!-- About -->
-    <div class="hero bg-accent min-h-screen text-accent-content">
+    <div id="about" class="hero bg-accent min-h-screen text-accent-content">
         <div class="hero-content flex-col lg:flex-row mt-4 mx-10 lg:mx-3 lg-mx-0">
             <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
                 class="max-w-sm rounded-lg shadow-2xl mr-10 mb-10" />
@@ -159,7 +159,7 @@
     </div> -->
 
     <!-- Benifits -->
-    <div class="bg-base-200 flex justify-center items-center flex-col">
+    <div id="perks" class="bg-base-200 flex justify-center items-center flex-col">
         <h1 class="text-5xl uppercase px-4 pt-4 tracking-tight font-semibold text-base-content">Perks</h1>
         <h1 class="lg:text-xl p-4 text-base-content">Why become a Campus Ambassador?</h1>
 
@@ -229,7 +229,7 @@
         </div>
     </div>
 
-    <div class="px-10 pt-10 pb-5 bg-base-200 flex flex-col">
+    <div id="responsibilities" class="px-10 pt-10 pb-5 bg-base-200 flex flex-col">
         <div class="flex justify-center items-center text-5xl uppercase px-4 pt-4 tracking-tight font-semibold">
             Responsibilities</div>
         <h2 class="flex justify-center items-center mb-10 text-xl p-4 text-base-content">Your role as a campus
@@ -407,7 +407,7 @@
         </div>
     </div>
 
-    <div class="pt-10 px-10 bg-base-200 flex flex-col">
+    <div id="contact" class="pt-10 px-10 bg-base-200 flex flex-col">
         <div class="flex justify-center items-center text-5xl uppercase px-4 tracking-tight font-semibold">
             Contact Us</div>
         <h2 class="flex justify-center items-center mb-10 text-xl p-4 text-base-content">Need a hand? Or a high
@@ -432,7 +432,7 @@
                             d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
                         </path>
                     </svg>
-                    harshdeep.azeotropy@gmail.com
+                    <a href="mailto:harshdeep.azeotropy@gmail.com"> harshdeep.azeotropy@gmail.com </a>
                 </div>
                 <div class="flex justify-center items-center font-light ">+91 91228-94555</div>
                 <div class="divider divider-accent"></div>
@@ -478,7 +478,7 @@
                             d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
                         </path>
                     </svg>
-                    geet.azeotropy@gmail.com
+                    <a href="mailto:harshdeep.azeotropy@gmail.com"> geet.azeotropy@gmail.com </a>
                 </div>
                 <div class="flex justify-center items-center font-light">+91 63771-63636</div>
                 <div class="divider divider-accent"></div>
@@ -536,24 +536,24 @@
             <div class="flex gap-3 mb-3">
                 <p>&#9762;</p>
                 <div>
-                    <p class="font-semibold">Soumya Mandal</p>
+                    <p class="font-semibold">Harshdeep Kaushal</p>
                     <p>
                         <a class="text-xs link link-hover"
-                            href="mailto:soumyamandal@azeotropy.org">soumyamandal@azeotropy.org</a>
+                            href="mailto:harshdeepkaushal@azeotropy.org">harshdeepkaushal@azeotropy.org</a>
                         <br />
-                        <span class="text-xs">+91-94763 27311</span>
+                        <span class="text-xs">+91-91228 94555</span>
                     </p>
                 </div>
             </div>
             <div class="flex gap-3">
                 <p>&#9762;</p>
                 <div>
-                    <p class="font-semibold">Tanisha Chak</p>
+                    <p class="font-semibold">Geet Israni</p>
                     <p>
                         <a class="text-xs link link-hover"
-                            href="mailto:tanishachak@azeotropy.org">tanishachak@azeotropy.org</a>
+                            href="mailto:geetisrani@azeotropy.org">geetisrani@azeotropy.org</a>
                         <br />
-                        <span class="text-xs">+91-79851 39628</span>
+                        <span class="text-xs">+91-63771 63636</span>
                     </p>
                 </div>
             </div>

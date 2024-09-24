@@ -40,3 +40,8 @@ function startCounting() {
 
 // Initialize counting when DOM is fully loaded
 window.addEventListener('DOMContentLoaded', startCounting);
+
+
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
