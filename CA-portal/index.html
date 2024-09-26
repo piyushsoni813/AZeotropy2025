@@ -14,6 +14,7 @@
 
 <body>
 
+
     <header class="navbar bg-base-100 sticky top-0 z-50">
         <div class="navbar-start">
             <div class="dropdown">
@@ -30,6 +31,7 @@
                     <li><a onclick="scrollToSection('about')">About</a></li>
                     <li><a onclick="scrollToSection('perks')">Perks</a></li>
                     <li><a onclick="scrollToSection('responsibilities')">Responsibilities</a></li>
+                    <li><a onclick="scrollToSection('leaderboard')">leaderboard</a></li>
                     <li><a onclick="scrollToSection('contactus')">Contact Us</a></li>
                     </ul>
                 </ul>
@@ -44,10 +46,10 @@
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
                 <li><a onclick="scrollToSection('home')">Home</a></li>
-                <li><a onclick="scrollToSection('leaderboard')">leaderboard</a></li>
                 <li><a onclick="scrollToSection('about')">About</a></li>
                 <li><a onclick="scrollToSection('perks')">Perks</a></li>
                 <li><a onclick="scrollToSection('responsibilities')">Responsibilities</a></li>
+                <li><a onclick="scrollToSection('leaderboard')">leaderboard</a></li>
                 <li><a onclick="scrollToSection('contact')">Contact Us</a></li>
                 <li>
                     <details>
@@ -94,11 +96,16 @@
     </div>
 
     <!-- About -->
-    <div id="about" class="hero bg-accent min-h-screen text-accent-content">
-        <div class="hero-content flex-col lg:flex-row mt-4 mx-10 lg:mx-3 lg-mx-0">
-            <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-                class="max-w-sm rounded-lg shadow-2xl mr-10 mb-10" />
-            <div>
+    <div id="about" class="hero bg-accent text-accent-content">
+        <div class="hero-content flex-col lg:flex-row mt-4 mx-0 lg:mx-0">
+                <video class="flex-auto lg:w-full rounded-lg lg:aspect-video" controls>
+                    <source
+                        src="https://docs.material-tailwind.com/demo.mp4"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                </video>
+            <div class="flex-auto ">
                 <h1 class="text-5xl font-bold">About AZeotropy</h1>
                 <p class="py-6">
                     AZeotropy is an interesting blend of various intriguing competitions, lecture series, panel
@@ -148,21 +155,10 @@
         </div>
     </div>
     
-
-    <!-- <div class="flex flex-wrap lg:flex-row justify-center bg-base-200">
-        <div class="card bg-base-100 justify-center w-96 m-4 p-4 shadow-xl">01
-        </div>
-        <div class="card bg-base-100 justify-center w-96 m-4 p-4 shadow-xl">01
-        </div>
-        <div class="card bg-base-100 justify-center w-96 m-4 p-4 shadow-xl">01
-        </div>
-    </div> -->
-
     <!-- Benifits -->
     <div id="perks" class="bg-base-200 flex justify-center items-center flex-col">
         <h1 class="text-5xl uppercase px-4 pt-4 tracking-tight font-semibold text-base-content">Perks</h1>
         <h1 class="lg:text-xl p-4 text-base-content">Why become a Campus Ambassador?</h1>
-
     </div>
 
     <div class="flex flex-wrap lg:flex-row justify-center bg-base-200 pb-6" >
@@ -196,7 +192,7 @@
                 the memories that will be made together.</h1>
         </div>
         <div class="card bg-neutral text-neutral-content items-start text-2xl w-96 m-4 p-12 shadow-xl font-semibold " id="apple">
-            Network
+            Networking Opportunities
             <h1 class="text-base mt-4 font-normal">Create a network among your peers that will help build your
                 character, build confidence and gain a perspective</h1>
         </div>
@@ -220,12 +216,12 @@
             <h1 class="text-base mt-4 font-normal">Each Campus Ambassador will receive monthly career guidance and resume-building sessions aimed at enhancing their job prospects and professional development</h1>
         </div>
         <div class="card bg-neutral text-neutral-content  items-start text-2xl w-96 m-4 p-12 shadow-xl font-semibold "id="apple">
-            Carrier Guidance
-            <h1 class="text-base mt-4 font-normal">Each Campus Ambassador will receive monthly career guidance and resume-building sessions aimed at enhancing their job prospects and professional development</h1>
+            Social Media Recognition
+            <h1 class="text-base mt-4 font-normal">The most dedicated and top-performing Campus Ambassadors will be prominently featured on our official social media platforms, recognizing their exceptional contributions</h1>
         </div>
         <div class="card bg-neutral text-neutral-content  items-start text-2xl w-96 m-4 p-12 shadow-xl font-semibold "id="apple">
-            Carrier Guidance
-            <h1 class="text-base mt-4 font-normal">Each Campus Ambassador will receive monthly career guidance and resume-building sessions aimed at enhancing their job prospects and professional development</h1>
+            Future Event Planning Role
+            <h1 class="text-base mt-4 font-normal">Provide an exclusive opportunity for top ambassadors to join the organizing committee for next year's festival, offering leadership experience.</h1>
         </div>
     </div>
 
@@ -312,59 +308,56 @@
         <div class="flex flex-wrap items-start justify-center p-10 rounded-xl bg-base-300 gap-6">
             <div class="flex flex-col max-w-md lg:max-w-sm rounded-xl p-6 bg-base-100">
                 <div class="font-semibold mb-5 text-xl">
-                    Solid foundation for any project
+                    A Catalyst for Growth
                 </div>
-                <div class="mb-3">This is a very complex and beautiful set of elements. Under the hood it comes with the
-                    best things from 2 different worlds: Figma and Tailwind.”
+                <div class="mb-3">As a Campus Ambassador for AZeotropy, IIT Bombay, I helped shape India’s largest chemical engineering symposium. This role enhanced my management, networking, and communication skills while bringing workshops and competitions to my college.<br> AZeotropy was a catalyst for both personal growth and professional development
                 </div>
                 <div class="flex flex-row">
                     <div class="avatar">
                         <div class="w-12 rounded-full">
-                            <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                            <img src="img/amit.jpg" />
                         </div>
                     </div>
                     <div class="px-4 grid content-between">
-                        <div class="font-semibold">Bonnie Green</div>
-                        <div class="font-thin">CTO at Open AI</div>
+                        <div class="font-semibold">Amit kumar</div>
+                        <div class="font-thin">CA at MNNIT Allahabad</div>
                     </div>
                 </div>
             </div>
 
             <div class="flex flex-col max-w-md lg:max-w-md rounded-xl p-6 bg-base-100">
                 <div class="font-semibold mb-5 text-xl">
-                    Solid foundation for any project
+                    From Participant to Organizer
                 </div>
-                <div class="mb-3">"This is a very complex and beautiful set of elements. Under the hood it comes with
-                    the best things
-                    from 2 different worlds: Figma and Tailwind.”
+                <div class="mb-3">As a Campus Ambassador for Azeotropy, I connected with students from 350+ colleges, participating in competitions, discussions, and workshops.<br> This experience sharpened my problem-solving skills and deepened my understanding of chemical engineering and industry practices, fueling my passion for learning and innovation
                 </div>
                 <div class="flex flex-row">
                     <div class="avatar">
                         <div class="w-12 rounded-full">
-                            <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                            <img src="img/anjali.jpg" />
                         </div>
                     </div>
                     <div class="px-4 grid content-between">
-                        <div class="font-semibold">Bonnie Green</div>
-                        <div class="font-thin">CTO at Open AI</div>
+                        <div class="font-semibold">Anjali shinde</div>
+                        <div class="font-thin">CA at Pravara Rural Engineering College</div>
                     </div>
                 </div>
             </div>
 
             <div class="flex flex-col max-w-md lg:max-w-xl rounded-xl p-6 bg-base-100">
                 <div class="font-semibold mb-5 text-xl">
-                    Solid foundation for any project
+                    Building Connections and Innovation Through Azeotropy
                 </div>
-                <div class="mb-3">Being the Campus Ambassador for Azeotropy, IIT Bombay, was an exciting and fulfilling experience. It helped me grow as a leader, connect with amazing people, and bring workshops that really benefited my peers. I'm grateful for the opportunity, as it has inspired my confidence and opened exciting possibilities in my chemical engineering journey
+                <div class="mb-3">Being the Campus Ambassador for Azeotropy, IIT Bombay, was an exciting and fulfilling experience. It helped me grow as a leader, connect with amazing people, and bring workshops that really benefited my peers.<br><br>I'm grateful for the opportunity, as it has inspired my confidence and opened exciting possibilities in my chemical engineering journey
                 </div>
                 <div class="flex flex-row">
                     <div class="avatar">
                         <div class="w-12 rounded-full">
-                            <img src="img/Dhruv.jpg" />
+                            <img src="img/andriya.jpg" />
                         </div>
                     </div>
                     <div class="px-4 grid content-between">
-                        <div class="font-semibold">ANDRIYA MANOJ</div>
+                        <div class="font-semibold">Andriya Manoj</div>
                         <div class="font-thin">CA at Amal Jyothi college of engineering</div>
                     </div>
                 </div>
@@ -402,7 +395,7 @@
                         </div>
                     </div>
                     <div class="px-4 grid content-between">
-                        <div class="font-semibold">DHRUV SHINDE</div>
+                        <div class="font-semibold">Jenil Abhangi</div>
                         <div class="font-thin">CA at Dharmsinh Desai University</div>
                     </div>
                 </div>
@@ -430,7 +423,7 @@
                     </div>
                 </div>
                 <div class="flex justify-center items-center pb-3 font-black text-3xl">Harshdeep Kaushal</div>
-                <div class="flex justify-center items-center pb-1 font-light text-xl">Public Relations Manager</div>
+                <div class="flex justify-center items-center pb-1 font-light text-xl">Media Manager</div>
                 <div class="flex justify-center items-center pb-1 font-light ">
                     <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current mr-2">
                         <path
