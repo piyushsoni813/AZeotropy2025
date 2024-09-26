@@ -2755,3 +2755,213 @@ html {
   box-shadow: 10px 10px;
   scale: 1.05;
 }
+
+/* Background Styling */
+.duties {
+  background-color: #141b24; /* Dark background */
+  padding: 50px 0; /* Padding for spacing */
+  border-radius: 15px; /* Slight border radius for the section */
+}
+
+/* Card Container */
+.duties_container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px; /* Spacing between cards */
+  margin-top: 2%;
+  margin-bottom: 60px;
+}
+
+/* Flip Cards */
+.flip-card {
+  background-color: transparent;
+  width: 20%; /* Adjust the width to fit 4 cards in a row */
+  height: 16em; /* Adjust height */
+  perspective: 1000px;
+  border-radius: 10px; /* Round corners */
+  transition: transform 0.3s ease-in-out;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Card shadow */
+}
+
+.flip-card:hover {
+  transform: scale(1.05); /* Hover effect to scale card */
+}
+
+/* Flip Animation */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 10px; /* Rounded corners on both front and back */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Flip animation on hover */
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  border-radius: 10px; /* Ensures front and back sides are rounded */
+}
+
+.flip-card-front {
+  background-color: #1c242d; /* Slightly lighter dark color */
+  color: white;
+}
+
+.flip-card-back {
+  background-color: #1c242d; /* Same background color for the back */
+  color: white;
+  transform: rotateY(180deg); /* Flipped position */
+}
+
+.flip-card-front:hover .icon, 
+.flip-card-back:hover .description {
+  transform: scale(1.1); /* Slightly scale up on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+/* Icon Styling */
+.duties .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%; /* Adjust icon size */
+  height: 45%;
+}
+
+.duties h2 {
+  font-size: 1.3em;
+  margin: 2px;
+  color: white; /* Text color */
+}
+
+.duties .description {
+  font-size: 13px;
+  line-height: 22px;
+  color: white; /* Description color */
+  text-align: center;
+  padding: 2%;
+}
+
+/* Hover Effects */
+.flip-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .duties_container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .flip-card {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 756px) {
+  .duties_container {
+    flex-direction: column;
+  }
+
+  .flip-card {
+    width: 100%;
+    height: 10em;
+  }
+}
+
+/* Global Dark Mode */
+body.dark-mode {
+  background-color: #141b24;
+  color: white;
+}
+
+/* Global Light Mode */
+body.light-mode {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+/* Overall Leaderboard container */
+#leaderboard {
+  background-color: #1a1b20; /* Dark greyish background */
+  color: #ffffff; /* Light text for readability */
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Soft shadow for depth */
+  margin: 2rem 0;
+  max-width: 800px; /* Adjust the width to fit neatly */
+  margin-left: auto;
+  margin-right: auto; /* Center the leaderboard */
+}
+
+/* Leaderboard items */
+.leaderboard {
+  margin-top: 2rem;
+}
+
+.leaderboard-item {
+  background-color: #2c2e34; /* Slightly lighter grey for leaderboard items */
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for each item */
+}
+
+/* Styling for rank, name, stars, and score */
+.leaderboard-item .rank {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.leaderboard-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.leaderboard-item .name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.leaderboard-item .stars {
+  font-size: 1.5rem;
+  color: #f1c40f; /* Gold for filled stars */
+}
+
+.leaderboard-item .score {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f39c12; /* Highlighted gold color for the score */
+}
+
+/* Stars */
+.star {
+  color: #888888; /* Grey for empty stars */
+}
+
+.star.full {
+  color: #f1c40f; /* Gold for full stars */
+}
