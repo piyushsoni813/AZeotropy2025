@@ -3045,6 +3045,10 @@ html {
   letter-spacing: 0.5px;
 }
 
+.body{
+  width: 100vw;
+}
+
 lord-icon {
   width: 128px;
   height: 128px;
@@ -3226,6 +3230,7 @@ lord-icon {
 
 .leaderboard {
   margin-top: 2rem;
+  width: auto;
 }
 
 .leaderboard-item {
