@@ -133,7 +133,7 @@
         <div class="mt-4">
             <p class="text-lg">
                 We are thrilled to introduce our new feature in the upcoming AZeotropy event! Stay tuned for more updates. 
-                <span class="font-bold">Mark your calendars for October 2025!</span>
+                <span class="font-bold">Mark your calendars for 1st March 2026!</span>
             </p>
             <div class="mt-4">
                 <a href="#details" class="btn btn-accent hover:scale-105 transition-transform duration-300">Learn More</a>
@@ -252,6 +252,13 @@
             const now = new Date().getTime();
             const distance = targetDate - now;
 
+            if (distance <= 0) {
+                clearInterval(timerInterval);
+                document.querySelector(".grid").innerHTML =
+                    "<h2 class='text-4xl font-bold text-center'>Event Started</h2>";
+                return;
+            }
+
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -261,20 +268,16 @@
             document.getElementById('hours').style.setProperty('--value', hours);
             document.getElementById('minutes').style.setProperty('--value', minutes);
             document.getElementById('seconds').style.setProperty('--value', seconds);
-
-            if (distance < 0) {
-                clearInterval(timerInterval);
-                document.querySelector(".countdown").textContent = "Event Started";
-            }
         };
 
+        updateCountdown(); // run immediately once
         const timerInterval = setInterval(updateCountdown, 1000);
     }
 
+    // 1 March 2026, 11:00 AM IST
     const targetDate = new Date("2026-03-01T11:00:00+05:30").getTime();
     startCountdown(targetDate);
 </script>
-<script>
   // Function to dismiss the announcement box
   function dismissAnnouncement() {
       const announcementBox = document.getElementById('announcement');
